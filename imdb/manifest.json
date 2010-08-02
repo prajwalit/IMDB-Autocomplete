@@ -1,0 +1,12 @@
+{
+  "name": "IMDB Autocomplete",
+  "version": "1.0",
+  "description": "Autocomplete for IMDB search bar",
+  "icons": { "128": "icon.jpg" },
+  "content_scripts": [{	
+    "matches": ["http://*.imdb.com/*", "https://*.imdb.com/*"],
+    "css": ["imdb-ac.css"],
+    "js": ["jquery.js", "jquery-ac.js", "imdbac.js"]
+  }],
+  "permissions": ["http://*.imdb.com/", "https://*.imdb.com/"]
+}
