@@ -1,0 +1,10 @@
+IMDB Autocomplete extension for chrome.
+
+This will convert imdb searchbar to autocomplete list.
+It'll start inserting movies/people into local database as you go on surfing imdb site.
+
+Best way to start is go to top 250 page after installing this extension.
+http://www.imdb.com/chart/top
+
+If there are any issues with this extension, contact me - i.fix.sites [at] gmail [dot] com
+or ping me on twitter - http://twitter.com/prajwalit
