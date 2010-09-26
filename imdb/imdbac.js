@@ -22,25 +22,19 @@
     }
     // Movie Page
     if(window.location.pathname.indexOf("/title/") !== -1) {
-      var splt = $("#tn15title h1").text().split(" (");
+      var splt = $("title").text().split(" - ") [0].split(" (");
       var name = splt[0];
       var url = window.location.pathname;
       var year = splt[1].split(")") [0];
       insertIntoDb("Movie", name, url, year);
-      
-      //Director
-      $("#director-info a").each(function(index, node) {
-         insertIntoDb("Person", $(node).text(), $(node).attr("href"), null);
-      });
-
       //Cast
-      $("#tn15main .cast .nm a").each(function(index, node) {
+      $("table.cast_list .name a").each(function(index, node) {
          insertIntoDb("Person", $(node).text(), $(node).attr("href"), null);
       });
     }
     //Person Page
     if(window.location.pathname.indexOf("/name/") !== -1) {
-      var name = $("#tn15title h1").text().split(" More at") [0];
+      var name = $("title").text().split(" - ") [0];
       var url = window.location.pathname;
       insertIntoDb("Person", name, url, null);
     }
