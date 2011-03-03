@@ -75,5 +75,13 @@
   }).result(function(event, item) {
     location.href = "http://www.imdb.com" + item.url;
   });
-  imdbSearch.focus ();
+
+  $ (document).keypress (function (event) {
+    var et = event.target;
+    if (event.keyCode === 47 && (et.tagName !== "INPUT" || et.tagName !== "TEXTAREA")) {
+      event.preventDefault ();
+      imdbSearch.focus ();
+    }
+  });
+
 }());
