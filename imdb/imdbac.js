@@ -29,7 +29,7 @@
       insertIntoDb("Movie", name, url, year);
       //Cast
       $("table.cast_list .name a").each(function(index, node) {
-         insertIntoDb("Person", $(node).text(), $(node).attr("href"), null);
+        insertIntoDb("Person", $(node).text(), $(node).attr("href"), null);
       });
     }
     //Person Page
@@ -59,7 +59,7 @@
   $.each(db, function(k, v){
     arr.push(v);
   });
- 
+  
   var imdbSearch = $("form input[name=q]");
   imdbSearch.addClass("imdbac");
   imdbSearch.attr("autocomplete", "off");
@@ -75,4 +75,5 @@
   }).result(function(event, item) {
     location.href = "http://www.imdb.com" + item.url;
   });
+  imdbSearch.focus ();
 }());
